@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Tabbed Playlist with Social plugin</title>
   <!-- include styles for the social plugin -->
-  <link href="//players.brightcove.net/videojs-social/3/videojs-social.css" rel="stylesheet">
+  <link href="https://players.brightcove.net/videojs-social/3/videojs-social.css" rel="stylesheet">
 
   <style type="text/css">
    .container {
@@ -87,7 +87,7 @@
   <!-- Use the player embed code with the id attribute -->
   <div class="myplayer">
 
-    <video id="myPlayerID"
+    <video-js id="myPlayerID"
            data-account="1752604059001"
            data-player="SJly4aArKZ"
            data-embed="default"
@@ -95,15 +95,15 @@
            class="video-js"
            controls
            width="450"
-           height="253.13"></video>
-    <script src="//players.brightcove.net/1752604059001/SJly4aArKZ_default/index.min.js"></script>
+           height="253.13"></video-js>
+    <script src="https://players.brightcove.net/1752604059001/SJly4aArKZ_default/index.min.js"></script>
       <!-- Include a placeholder for the playlist -->
       <ol class="vjs-playlist"></ol>
     </div>
   </div>
 
   <!-- include the script for the social plugin -->
-  <script src="//players.brightcove.net/videojs-social/3/videojs-social.min.js"></script>
+  <script src="https://players.brightcove.net/videojs-social/3/videojs-social.min.js"></script>
 
   <!-- custom script for the tabbed playlist -->
   <script id="pageScript" type="text/javascript">
@@ -118,7 +118,7 @@
       url, tabId, item,
       playlistNames = [];
 
-    videojs("myPlayerID").ready(function() {
+    videojs.getPlayer('myPlayerID').ready(function() {
       // Get a reference to the player when it is ready
       myPlayer = this;
       // Get the tabId from the URL if it exists
